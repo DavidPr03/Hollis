@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+            overflow: hidden; /* Evita el desbordamiento de la pantalla */
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%; /* Ajuste en el ancho */
+            max-width: 500px; /* Máximo ancho para pantallas grandes */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff6666;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        button {
+            margin-top: 20px;
+            background: #ff6666;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff4d4d;
+        }
+
+        .heart {
+            font-size: 4em;
+            color: #ff4d4d;
+            animation: beat 1s infinite;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Media query para pantallas más pequeñas (smartphones) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+
+            .heart {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hola mi amorchi ❤️</h1>
+        <p>🥺😍Solo quiero recordarte que eres la mujer más hermosa del mundo🥺😍</p>
+        <p class="heart">💖</p>
+        <p>🥰🥰🥰🥰Y que te amo con todo mi corazón🥰🥰🥰🥰</p>
+        <button onclick="revealMessage()">Dame clic 😊</button>
+        <p id="hiddenMessage" style="display: none; margin-top: 20px; font-size: 1.5em; color: #ff6666;">🥰🥺😍💕 ¡Eres mi todo! 🥰🥺😍💕</p>
+    </div>
+    
+    <script>
+        function revealMessage() {
+            const message = document.getElementById('hiddenMessage');
+            message.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
